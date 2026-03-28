@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>AI作业演示 - 学号：423830105</title>
+    <style>
+        body { font-family: "微软雅黑"; max-width: 800px; margin: 50px auto; text-align: center; }
+        .info { font-size: 22px; color: #2c3e50; margin-bottom: 30px; }
+        .demo { padding: 20px; border: 1px solid #eee; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>计算机前沿技术AI作业</h1>
+        <p>学号：423830105</p>
+        <p>姓名：吴汶研</p>
+    </div>
+    <div class="demo">
+        <h3>AI功能演示：文本情感分析</h3>
+        <textarea placeholder="输入一段中文文本，分析情感倾向..." rows="4" cols="50"></textarea>
+        <br>
+        <button onclick="analyzeSentiment()">分析情感</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        // 简单模拟AI情感分析逻辑
+        function analyzeSentiment() {
+            const text = document.querySelector('textarea').value;
+            const result = text.includes('开心') || text.includes('喜欢') || text.includes('棒') 
+                ? '😊 积极情感' 
+                : text.includes('难过') || text.includes('讨厌') || text.includes('差') 
+                    ? '😔 消极情感' 
+                    : '😐 中性情感';
+            document.getElementById('result').textContent = '分析结果：' + result;
+        }
+    </script>
+</body>
+</html>
